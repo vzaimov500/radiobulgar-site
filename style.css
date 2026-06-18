@@ -95,6 +95,12 @@ nav.site-nav a:hover {
   border-bottom-color: var(--rose);
 }
 
+nav.site-nav a.lang-link {
+  margin-left: 0.4rem;
+  padding-left: 1rem;
+  border-left: 1px solid var(--line);
+}
+
 main {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -322,6 +328,28 @@ main {
 }
 
 .faq-item p { margin: 0; color: var(--ink-soft); font-size: 0.94rem; }
+
+/* ---------- update posts ---------- */
+
+.post {
+  padding: 1.3rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.post:first-of-type { border-top: none; padding-top: 0; }
+
+.post-date {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.76rem;
+  color: var(--ink-faint);
+  margin: 0 0 0.3rem;
+}
+
+.post h2 {
+  font-size: 1.25rem;
+  font-style: italic;
+  margin: 0 0 0.5rem;
+}
 
 /* ---------- contact form ---------- */
 
