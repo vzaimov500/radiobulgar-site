@@ -1,5 +1,18 @@
 [
   {
+    "id": "new-stations-2026-06-19",
+    "type": "link",
+    "date": "2026-06-19",
+    "title": {
+      "en": "10 new Bulgarian stations added",
+      "bg": "10 нови български станции"
+    },
+    "url": {
+      "en": "https://vzaimov500.github.io/radiobulgar-site/messages.html#new-stations-2026-06-19",
+      "bg": "https://vzaimov500.github.io/radiobulgar-site/bg/messages.html#new-stations-2026-06-19"
+    }
+  },
+  {
     "id": "welcome-2026-06-18",
     "type": "link",
     "date": "2026-06-18",
