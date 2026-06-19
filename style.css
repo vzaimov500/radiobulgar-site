@@ -1,0 +1,436 @@
+/* ============================================================
+   RadioBulgar — signal on paper
+   Light theme. The signature motif is a waveform: thin bars of
+   varying height standing in for the audio signal itself, used
+   as the logomark, the hero's one decorative gesture, and a
+   quiet bullet on each feature — never a tuning dial, never a
+   cabinet.
+   ============================================================ */
+
+:root {
+  --paper:      #fbf7ef;
+  --panel:      #ffffff;
+  --line:       #e6dcc8;
+  --ink:        #211b13;
+  --ink-soft:   #6c6151;
+  --ink-faint:  #9b8f7a;
+  --rose:       #b23a4a;
+  --rose-soft:  #c96274;
+  --pine:       #2e6b52;
+  --pine-soft:  #4c8a6e;
+  --max-width: 880px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  line-height: 1.65;
+}
+
+h1, h2, h3, .brand-word {
+  font-family: "Fraunces", Georgia, serif;
+}
+
+a { color: var(--rose); text-decoration: none; }
+a:hover { text-decoration: underline; text-decoration-color: var(--rose-soft); }
+
+:focus-visible {
+  outline: 2px solid var(--rose);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ---------- header ---------- */
+
+header.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 1.5rem 1.1rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--ink);
+  letter-spacing: 0.005em;
+}
+
+.brand:hover { text-decoration: none; }
+
+.mark { flex: none; }
+.mark rect:nth-child(odd) { fill: var(--pine); }
+.mark rect:nth-child(even) { fill: var(--rose); }
+
+nav.site-nav {
+  display: flex;
+  gap: 1.5rem;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+nav.site-nav a {
+  color: var(--ink-soft);
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+
+nav.site-nav a:hover {
+  color: var(--rose);
+  text-decoration: none;
+  border-bottom-color: var(--rose);
+}
+
+nav.site-nav a.lang-link {
+  margin-left: 0.4rem;
+  padding-left: 1rem;
+  border-left: 1px solid var(--line);
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+
+/* ---------- hero ---------- */
+
+.hero {
+  padding: 3.2rem 0 1.5rem;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.82rem;
+  margin-bottom: 1.3rem;
+  letter-spacing: 0.04em;
+}
+
+.eyebrow .cy { font-size: 1rem; color: var(--rose); font-weight: 500; }
+.eyebrow .gloss { color: var(--ink-faint); }
+
+.hero h1 {
+  font-size: clamp(2.3rem, 5.8vw, 3.4rem);
+  font-weight: 600;
+  font-style: italic;
+  margin: 0 0 1rem;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+.hero .tagline {
+  font-size: 1.12rem;
+  color: var(--ink-soft);
+  max-width: 480px;
+  margin: 0 auto 2.4rem;
+}
+
+/* signature waveform rule */
+
+.waveform {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  height: 56px;
+  margin: 0 auto 2.2rem;
+}
+
+.waveform .bar {
+  width: 3px;
+  border-radius: 2px;
+  background: var(--pine);
+  align-self: center;
+  transform-origin: center;
+  animation: breathe 3.6s ease-in-out infinite;
+}
+
+.waveform .bar:nth-child(even) { background: var(--rose-soft); }
+
+@keyframes breathe {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(0.82); }
+}
+
+.standby-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.82rem;
+}
+
+.standby-badge .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--pine);
+}
+
+.net-note {
+  margin: 0.9rem auto 0;
+  max-width: 380px;
+  font-size: 0.8rem;
+  color: var(--ink-faint);
+}
+
+/* ---------- features ---------- */
+
+.band { margin-top: 3.5rem; }
+
+.band-title {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--ink-faint);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.25rem;
+}
+
+.feature-card {
+  background: var(--panel);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 1.3rem 1.4rem 1.4rem;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(33, 27, 19, 0.08);
+}
+
+.feature-card .mini-wave {
+  display: block;
+  margin-bottom: 0.7rem;
+}
+
+.feature-card h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.feature-card p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.93rem;
+}
+
+/* ---------- doc panel (support / privacy) ---------- */
+
+.doc {
+  background: var(--panel);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 2.4rem clamp(1.4rem, 5vw, 3.2rem) 2.8rem;
+  margin-top: 2.5rem;
+}
+
+.doc h1.page-title {
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 600;
+  margin: 0 0 0.4rem;
+}
+
+.doc .stamp {
+  display: inline-block;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.76rem;
+  color: var(--ink-faint);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 0.2rem 0.55rem;
+  margin-bottom: 1.7rem;
+}
+
+.doc h2 {
+  font-size: 1.25rem;
+  font-style: italic;
+  margin-top: 2.2rem;
+  padding-top: 1.3rem;
+  border-top: 1px solid var(--line);
+}
+
+.doc h2:first-of-type { border-top: none; padding-top: 0; }
+
+.doc h3 {
+  font-size: 1.02rem;
+  font-style: normal;
+  margin: 1.4rem 0 0.4rem;
+  color: var(--rose);
+}
+
+.doc ul { padding-left: 1.3rem; }
+.doc li { margin: 0.3rem 0; }
+.doc code {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 0.1rem 0.4rem;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.88em;
+}
+
+.doc .lede {
+  font-size: 1.02rem;
+  color: var(--ink-soft);
+}
+
+/* ---------- FAQ entries ---------- */
+
+.faq-item {
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.faq-item:first-of-type { border-top: none; }
+
+.faq-item h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+  color: var(--rose);
+}
+
+.faq-item p { margin: 0; color: var(--ink-soft); font-size: 0.94rem; }
+
+/* ---------- update posts ---------- */
+
+.post {
+  padding: 1.3rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.post:first-of-type { border-top: none; padding-top: 0; }
+
+.post-date {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.76rem;
+  color: var(--ink-faint);
+  margin: 0 0 0.3rem;
+}
+
+.post h2 {
+  font-size: 1.25rem;
+  font-style: italic;
+  margin: 0 0 0.5rem;
+}
+
+/* ---------- contact form ---------- */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  max-width: 480px;
+  margin: 1.4rem 0 0.5rem;
+}
+
+.contact-form label {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+  margin-top: 0.7rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font: inherit;
+  font-family: "PT Sans", sans-serif;
+  padding: 0.6rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--rose-soft);
+}
+
+.contact-form button {
+  margin-top: 1.1rem;
+  align-self: flex-start;
+  padding: 0.65rem 1.5rem;
+  border: none;
+  border-radius: 999px;
+  background: var(--rose);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.92rem;
+  cursor: pointer;
+  font-family: "IBM Plex Mono", monospace;
+  letter-spacing: 0.04em;
+}
+
+.contact-form button:hover { background: #97303d; }
+
+/* ---------- footer ---------- */
+
+footer.site-footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2.2rem 1.5rem 3rem;
+  color: var(--ink-faint);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  border-top: 1px solid var(--line);
+  margin-top: 3rem;
+}
+
+footer.site-footer nav { display: flex; gap: 1.2rem; }
+footer.site-footer a { color: var(--ink-faint); }
+footer.site-footer a:hover { color: var(--rose); }
+
+@media (max-width: 520px) {
+  header.site-header { flex-direction: column; gap: 0.9rem; align-items: flex-start; }
+  .waveform { height: 44px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .waveform .bar { animation: none; }
+}

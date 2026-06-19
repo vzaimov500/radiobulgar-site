@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support — RadioBulgar</title>
+<meta name="description" content="Get help with RadioBulgar — frequently asked questions and contact information.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=PT+Sans:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a href="index.html" class="brand">
+    <svg class="mark" width="24" height="20" viewBox="0 0 24 20" aria-hidden="true">
+      <rect x="0"  y="7" width="3" height="6"  rx="1.5"/>
+      <rect x="5"  y="3" width="3" height="14" rx="1.5"/>
+      <rect x="10" y="0" width="3" height="20" rx="1.5"/>
+      <rect x="15" y="3" width="3" height="14" rx="1.5"/>
+      <rect x="20" y="7" width="3" height="6"  rx="1.5"/>
+    </svg>
+    <span class="brand-word">RadioBulgar</span>
+  </a>
+  <nav class="site-nav">
+    <a href="messages.html">Updates</a>
+    <a href="support.html">Support</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="bg/support.html" class="lang-link">БГ</a>
+  </nav>
+</header>
+
+<main>
+  <div class="doc">
+    <h1 class="page-title">Support</h1>
+    <p class="stamp">SERVICE &amp; ENQUIRIES</p>
+
+    <p class="lede">Having trouble with RadioBulgar, or have a suggestion? Send a message below and we'll get back to you.</p>
+
+    <form class="contact-form" action="https://formspree.io/f/xdavvrva" method="POST">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Your email</label>
+      <input type="email" id="email" name="_replyto" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <input type="text" name="_gotcha" style="display:none">
+
+      <button type="submit">Send message</button>
+    </form>
+
+    <h2>Frequently asked questions</h2>
+
+    <div class="faq-item">
+      <h3>A station won't play, or keeps buffering</h3>
+      <p>RadioBulgar always tries the best available stream for a station, but the stream itself is hosted by the radio station, not by us — if their server is temporarily down, playback may fail. Try again later, or pick another station in the meantime.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>The station list looks out of date</h3>
+      <p>The station list refreshes automatically when you start the app fresh. If a station's details still look wrong, open Settings and tap the refresh icon next to "Last updated" to fetch the newest list.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Playback stops, or notifications disappear, when the screen is off</h3>
+      <p>This is usually caused by your phone's battery-saving settings, not RadioBulgar — many manufacturers (Xiaomi, Huawei, Samsung, OnePlus, and others) aggressively restrict apps running in the background. Open your phone's battery settings and disable battery optimization (sometimes called "no restrictions" or "allow background activity") for RadioBulgar. <a href="https://dontkillmyapp.com" target="_blank" rel="noopener">dontkillmyapp.com</a> has exact steps for most phone brands.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How do I reorder my favourites?</h3>
+      <p>Open the Favourites section, tap the edit icon, then drag stations by their handle to reorder them.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Does RadioBulgar work without an internet connection?</h3>
+      <p>You can browse your last loaded station list offline, but playing a station requires an internet connection since the audio streams from the station's own server.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How much data does it use?</h3>
+      <p>Streaming uses your data connection for as long as you're listening, the same as streaming music or video — there's no offline playback. If you're on a limited mobile plan, prefer Wi-Fi when you can.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Is this FM radio, or does it use my phone's radio receiver?</h3>
+      <p>RadioBulgar is an internet radio app — it streams each station live over Wi-Fi or mobile data. It does not use your phone's built-in FM tuner (if it has one), and it won't work without a data connection.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Does the app collect my personal data?</h3>
+      <p>RadioBulgar doesn't require an account and doesn't collect personal information like your name or email. See the <a href="privacy.html">Privacy Policy</a> for full details on what is collected and why.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <span>&copy; 2026 RadioBulgar</span>
+  <nav>
+    <a href="messages.html">Updates</a>
+    <a href="support.html">Support</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </nav>
+</footer>
+
+</body>
+</html>
