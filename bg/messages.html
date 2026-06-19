@@ -9,17 +9,28 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=PT+Sans:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
 </head>
 <body>
 
 <header class="site-header">
   <a href="index.html" class="brand">
-    <svg class="mark" width="24" height="20" viewBox="0 0 24 20" aria-hidden="true">
-      <rect x="0"  y="7" width="3" height="6"  rx="1.5"/>
-      <rect x="5"  y="3" width="3" height="14" rx="1.5"/>
-      <rect x="10" y="0" width="3" height="20" rx="1.5"/>
-      <rect x="15" y="3" width="3" height="14" rx="1.5"/>
-      <rect x="20" y="7" width="3" height="6"  rx="1.5"/>
+    <svg class="mark" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+      <defs><clipPath id="markClip"><circle cx="12" cy="12" r="12"/></clipPath></defs>
+      <g clip-path="url(#markClip)">
+        <rect x="0" y="0" width="24" height="8" fill="#ffffff"/>
+        <rect x="0" y="8" width="24" height="8" fill="#00966e"/>
+        <rect x="0" y="16" width="24" height="8" fill="#d62512"/>
+        <g fill="#000000">
+          <rect x="0"  y="9" width="3" height="6"  rx="1.5"/>
+          <rect x="5"  y="5" width="3" height="14" rx="1.5"/>
+          <rect x="10" y="2" width="3" height="20" rx="1.5"/>
+          <rect x="15" y="5" width="3" height="14" rx="1.5"/>
+          <rect x="20" y="9" width="3" height="6"  rx="1.5"/>
+        </g>
+      </g>
     </svg>
     <span class="brand-word">RadioBulgar</span>
   </a>

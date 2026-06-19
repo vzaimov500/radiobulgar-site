@@ -71,8 +71,6 @@ header.site-header {
 .brand:hover { text-decoration: none; }
 
 .mark { flex: none; }
-.mark rect:nth-child(odd) { fill: var(--pine); }
-.mark rect:nth-child(even) { fill: var(--rose); }
 
 nav.site-nav {
   display: flex;
