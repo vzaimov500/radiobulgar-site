@@ -94,9 +94,17 @@ nav.site-nav a:hover {
 }
 
 nav.site-nav a.lang-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
   margin-left: 0.4rem;
   padding-left: 1rem;
   border-left: 1px solid var(--line);
+}
+
+.flag-icon {
+  flex: none;
+  border-radius: 2px;
 }
 
 main {
