@@ -48,7 +48,14 @@
       <label for="message">Съобщение</label>
       <textarea id="message" name="message" rows="5" required></textarea>
 
-      <input type="text" name="_gotcha" style="display:none">
+      <input
+        type="text"
+        name="_gotcha"
+        tabindex="-1"
+        autocomplete="off"
+        aria-hidden="true"
+        style="position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;"
+      >
 
       <button type="submit">Изпрати съобщение</button>
     </form>
