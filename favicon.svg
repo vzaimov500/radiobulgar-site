@@ -6,9 +6,8 @@
     <path d="M21,49 L21,59" />
     <path d="M32,41 L32,67" />
     <path d="M43,31 L43,77" />
-    <path d="M54,23 L54,85" />
-    <path d="M65,31 L65,77" />
-    <path d="M76,41 L76,67" />
-    <path d="M87,49 L87,59" />
   </g>
+  <polygon points="51,20 70.5,37 51,54" fill="#000000"/>
+  <polygon points="51,54 51,88 70.5,71" fill="#000000"/>
+  <polygon points="70.5,37 90,54 70.5,71" fill="#000000"/>
 </svg>
